@@ -40,7 +40,7 @@ import Home from './component/Home'
 import Contact from './component/Contact'
 import Product from './component/Product'
 import About from './component/About'
-import reactimg from './assets/img/reactimg.webp'
+// import reactimg from './assets/img/reactimg.webp'
 
 export default function App(){
   return(
@@ -53,9 +53,6 @@ export default function App(){
       <Route path='product' element={<Product/>}/>
       </Route>
     </Routes>
-    <a href="" target="_blank">
-          <img src={reactimg} className="Img react" alt="React img" />
-      </a>
     </BrowserRouter>
   )
 }
