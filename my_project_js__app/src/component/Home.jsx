@@ -63,7 +63,6 @@ const Home=()=>{
   }
     return(
         <>
-        <h2>Home</h2>
         <div id="demo" className="carousel slide" data-bs-ride="carousel">
 
   <div className="carousel-indicators">
@@ -108,11 +107,39 @@ const Home=()=>{
   </div>
 ))}
   </div>
+    {add ?(
+    <ViewProduct
+    currentproduct={currentProduct}
+    />
+  ):console.log('view product ')}
 </div>
-
-
         <Footer/>
         </>
     )
+}
+const ViewProduct=(currentproducts)=>{
+  const[product,setProduct]=useState(currentproducts)
+  document.getElementById("a1").style.display="none"
+  document.getElementById("demo").style.display="none"
+  return(
+    <div className="container">
+      <div className="row g-4">
+        <div className="col-lg-6 d-flex justify-content-center">
+          <img src={product.currentproduct.images} alt="" className='img-fluid col-lg-12 w-75'/>
+        </div>
+        <div className='desc col-lg-6'>
+          <h2>{product.currentproduct.title}</h2>
+          <p>{product.currentproduct.description}</p>
+          <p>${product.currentproduct.price}</p>
+          <h6>Rating:{product.currentproduct.rating}</h6>
+          <div className='row'>
+            <button className='btn btn-warning col-lg-10'>Add to cart</button>
+            <button className='btn btn-success col-lg-10 mt-1'>Buy now</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  )
 }
 export default Home

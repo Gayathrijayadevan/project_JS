@@ -1,5 +1,8 @@
 import { Link,Outlet } from "react-router-dom";
 function Layout() {
+  const handelClick=()=>{
+    window.location.reload();
+  };
     return(
         <>
         
@@ -12,7 +15,7 @@ function Layout() {
     <div className="collapse navbar-collapse" id="collapsibleNavbar">
       <ul className="navbar-nav">
         <li className="nav-item">
-        <Link to="/" className="nav-link">Home </Link>
+        <Link to="/" className="nav-link"onClick={handelClick}>Home </Link>
         </li>
         <li className="nav-item">
           <Link to="/about" className="nav-link">About</Link>
