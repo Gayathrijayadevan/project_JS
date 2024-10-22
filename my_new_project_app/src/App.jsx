@@ -37,14 +37,14 @@
 
 import React from "react";
 import TaskList from './component/TaskList';
-// import AddTask from "./component/AddTask";
+import AddTask from "./component/AddTask";
 
 function App() {
   return(
     <div className="App">
       <h1>Todo App</h1>
       {/* <a href="./component/AddTask">Add Page</a> */}
-      {/* <AddTask/> */}
+      <AddTask/>
       <TaskList/>
     </div>
   );
